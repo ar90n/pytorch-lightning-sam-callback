@@ -8,6 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 pytorch-lightning = "^1.6.3"
+torch = "^1.11.0+cpu"
 
 [tool.poetry.group.dev.dependencies]
 poethepoet = "^0.13.1"
@@ -26,6 +27,11 @@ commitizen = "^2.27.0"
 [tool.poetry.group.example.dependencies]
 torchvision = "^0.12.0"
 lightning-bolts = "^0.5.0"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cpu"
+secondary = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
