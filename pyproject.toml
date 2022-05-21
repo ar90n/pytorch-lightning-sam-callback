@@ -35,7 +35,7 @@ build-backend = "poetry.core.masonry.api"
 profile = "black"
 
 [tool.pyright]
-include = ["alfort", "examples"]
+include = ["pytorch_lightning_sam_callback"]
 stubPath ="stubs"
 typeCheckingMode = "strict"
 reportMissingImports = true
