@@ -1,12 +1,12 @@
 # this file is derived from https://github.com/davda54/sam/blob/main/sam.py
-from pytorch_lightning.utilities.types import STEP_OUTPUT
-from pytorch_lightning.callbacks import Callback
-from typing import List, Dict, Any, Iterator, cast, Optional
+from typing import Any, Dict, Iterator, List, Optional, cast
 
 import torch
+from pytorch_lightning import LightningModule, Trainer
+from pytorch_lightning.callbacks import Callback
+from pytorch_lightning.utilities.types import STEP_OUTPUT
 from torch import Tensor
 from torch.optim.optimizer import Optimizer
-from pytorch_lightning import LightningModule, Trainer
 
 
 def _get_params(optimizer: Optimizer) -> Iterator[Tensor]:
