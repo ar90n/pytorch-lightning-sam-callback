@@ -1,15 +1,15 @@
 import torch
-from torch.utils.data import DataLoader, Dataset
 from pytorch_lightning import LightningModule, Trainer
+from torch.utils.data import DataLoader, Dataset
 
 from pytorch_lightning_sam_callback import SAM
 
 
-class RandomDataset(Dataset):
-    def __init__(self, size, num_samples):
+class RandomDataset(Dataset[torch.Tensor]):
+    def __init__(self, size: int, num_samples: int):
         self.data = torch.randn(num_samples, size)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index: int):
         return self.data[index]
 
     def __len__(self):
