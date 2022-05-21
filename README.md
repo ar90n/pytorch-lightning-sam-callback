@@ -80,6 +80,6 @@ trainer.fit(model, train_dataloaders=DataLoader(RandomDataset(32, 64), batch_siz
 [issues-shield]: https://img.shields.io/github/issues/ar90n/pytorch-lightning-sam-callback.svg?style=flat
 [issues-url]: https://github.com/ar90n/pytorch-lightning-sam-callback/issues
 [license-shield]: https://img.shields.io/github/license/ar90n/pytorch-lightning-sam-callback.svg?style=flat
-[license-url]: https://github.com/ar90n/pytorch-lightning-sam-callback/blob/master/LICENSE.txt
+[license-url]: https://github.com/ar90n/pytorch-lightning-sam-callback/blob/master/LICENSE
 [codecov-shield]: https://codecov.io/gh/ar90n/pytorch-lightning-sam-callback/branch/main/graph/badge.svg?token=8GKU96ODLY
 [codecov-url]: https://codecov.io/gh/ar90n/pytorch-lightning-sam-callback
