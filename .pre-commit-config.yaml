@@ -19,9 +19,14 @@ ci:
   autofix_prs: true
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit suggestions'
   autoupdate_schedule: quarterly
+  skip: [pyright]
   # submodules: true
 
 repos:
+  - repo: https://github.com/python-poetry/poetry
+    rev: ''  # add version here
+    hooks:
+      - id: poetry-check
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
     hooks:

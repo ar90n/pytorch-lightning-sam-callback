@@ -24,6 +24,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Setup pyright
+      run: npm install -g pyright
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -49,9 +51,13 @@ jobs:
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python - --preview
         poetry install
 
+    - name: Type check
+      run: |
+        poetry run pyright --warnings
+
     - name: Tests
       run: |
-        poetry run coverage run --source alfort -m pytest -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+        poetry run coverage run --source pytorch_lightning_sam_callback -m pytest -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
 
     - name: Upload pytest test results
       uses: actions/upload-artifact@v3
