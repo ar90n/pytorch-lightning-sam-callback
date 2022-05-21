@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "pytorch-lightning-sam-callback"
+version = "0.0.0-dev"
+description = ""
+authors = ["Masahiro Wada <argon.argon.argon@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pytorch-lightning = "^1.6.3"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.13.1"
+pyright = "^1.1.238"
+pytest = "^7.1.1"
+pytest-cov = "^3.0.0"
+pytest-xdist = "^2.5.0"
+pytest-black = "^0.3.12"
+pre-commit = "^2.18.1"
+conventional-commit = "^0.4.2"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+commitizen = "^2.27.0"
+
+
+[tool.poetry.group.example.dependencies]
+torchvision = "^0.12.0"
+lightning-bolts = "^0.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.pyright]
+include = ["alfort", "examples"]
+stubPath ="stubs"
+typeCheckingMode = "strict"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+reportUnknownArgumentType = false
+reportUnknownMemberType	 = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+
+[tool.pytest.ini_options]
+addopts = "--strict --durations=0 --color=yes"
+testpaths = [
+    "tests"
+]
+
+[tool.poetry-version-plugin]
+source = "git-tag"
+
+[tool.poe.tasks]
+test = "pytest"
+check = "pre-commit run -a"
+install-plugins = "poetry plugin add poethepoet[poetry_plugin]"
+install-pre-commit = "pre-commit install"
