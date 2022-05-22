@@ -62,6 +62,10 @@ trainer = Trainer(max_epochs=3, callbacks=[SAM()])
 trainer.fit(model, train_dataloaders=DataLoader(RandomDataset(32, 64), batch_size=2))
 ```
 
+## Training Result
+![training_loss](https://github.com/ar90n/pytorch-lightning-sam-callback/blob/assets/images/training_loss.png?raw=true)
+![validation_loss](https://github.com/ar90n/pytorch-lightning-sam-callback/blob/assets/images/validation_loss.png)
+
 ## See Also
 * [Sharpness-Aware Minimization for Efficiently Improving Generalization](https://arxiv.org/abs/2010.01412)
 * [davda54/sam](https://github.com/davda54/sam)
