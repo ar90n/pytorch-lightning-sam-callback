@@ -65,5 +65,4 @@ source = "git-tag"
 [tool.poe.tasks]
 test = "pytest"
 check = "pre-commit run -a"
-install-plugins = "poetry plugin add poethepoet[poetry_plugin]"
 install-pre-commit = "pre-commit install"
