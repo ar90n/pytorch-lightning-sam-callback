@@ -5,7 +5,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![Codecov][codecov-shield]][codecov-url]
-[![MIT License][license-shield]][license-url]
+[![MIT][license-shield]][license-url]
 
 pytorch-lightning-sam-callback is an implementation of [SAM](https://arxiv.org/abs/2010.01412) using pytorch-lightning's Callback API.
 This project is motivated to integrate SAM with LightningModels without any modifications.
