@@ -77,7 +77,7 @@ trainer.fit(model, train_dataloaders=DataLoader(RandomDataset(32, 64), batch_siz
 [download-url]: https://pypi.org/project/pytorch-lightning-sam-callback/
 [version-shield]: https://img.shields.io/pypi/v/pytorch-lightning-sam-callback?style=flat
 [version-url]: https://pypi.org/project/pytorch-lightning-sam-callback/
-[build-shiled]: https://img.shields.io/github/workflow/status/ar90n/pytorch-lightning-sam-callback/CI%20testing/main
+[build-shiled]: https://img.shields.io/github/actions/workflow/status/ar90n/pytorch-lightning-sam-callback/ci-testing.yml
 [build-url]: https://github.com/ar90n/pytorch-lightning-sam-callback/actions/workflows/ci-testing.yml
 [contributors-shield]: https://img.shields.io/github/contributors/ar90n/pytorch-lightning-sam-callback.svg?style=flat
 [contributors-url]: https://github.com/ar90n/pytorch-lightning-sam-callback/graphs/contributors
