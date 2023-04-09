@@ -55,7 +55,6 @@ class SAM(Callback):
         optimizer: Optimizer,
         opt_idx: int,
     ) -> None:
-
         org_weights = self._first_step(optimizer)
         with torch.enable_grad():
             step_output = pl_module.training_step(self._batch, self._batch_idx)
