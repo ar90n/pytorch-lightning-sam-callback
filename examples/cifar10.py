@@ -118,6 +118,7 @@ def main():
         max_epochs=30,
         accelerator="auto",
         precision=16,
+        gradient_clip_val=1.,
         devices=1 if torch.cuda.is_available() else None,
         logger=CSVLogger(save_dir="logs/"),
         callbacks=[SAM()],
