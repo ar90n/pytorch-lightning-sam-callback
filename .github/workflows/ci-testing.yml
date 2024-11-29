@@ -23,7 +23,7 @@ jobs:
     timeout-minutes: 35
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup pyright
       run: npm install -g pyright
     - name: Set up Python ${{ matrix.python-version }}
