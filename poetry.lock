@@ -1221,18 +1221,19 @@ testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "no
 
 [[package]]
 name = "pytest-black"
-version = "0.3.12"
+version = "0.6.0"
 description = "A pytest plugin to enable format checking with black"
 category = "dev"
 optional = false
-python-versions = ">=2.7"
+python-versions = ">=3.5"
 files = [
-    {file = "pytest-black-0.3.12.tar.gz", hash = "sha256:1d339b004f764d6cd0f06e690f6dd748df3d62e6fe1a692d6a5500ac2c5b75a5"},
+    {file = "pytest_black-0.6.0-py3-none-any.whl", hash = "sha256:7eb747f54b6c997497b5cbc66a988be114b92016dbfa66d210d1d1f9f6b2dc76"},
+    {file = "pytest_black-0.6.0.tar.gz", hash = "sha256:ecb77455f379805cb4bd8f45a813a3754c3bbee3199adf1b3665c0dfd086b511"},
 ]
 
 [package.dependencies]
 black = {version = "*", markers = "python_version >= \"3.6\""}
-pytest = ">=3.5.0"
+pytest = ">=7.0.0"
 toml = "*"
 
 [[package]]
@@ -1799,4 +1800,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "443ee3f18b72bb1ec9b7189ef27cb847195798cfbc33211f106841b436533f77"
+content-hash = "be35e5df4aab28c3eb311cbe851f6cb5fdd8868014aac63eb7ddc3bfb172c613"
