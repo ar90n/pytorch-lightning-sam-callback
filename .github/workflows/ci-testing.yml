@@ -60,7 +60,7 @@ jobs:
         poetry run coverage run --source pytorch_lightning_sam_callback -m pytest -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
 
     - name: Upload pytest test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: pytest-results-${{ runner.os }}-${{ matrix.python-version }}
         path: junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
